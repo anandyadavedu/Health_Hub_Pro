@@ -1,0 +1,38 @@
+h1{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    padding: 11px;
+}
+.form-label{
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 12px;
+   
+   
+
+}
+.form-control{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top:0px;
+    margin-bottom:18px;
+    border: 2px solid #7c7e7a;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.modal-footer{
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-danger{
+ 
+    margin: 5px 5px;
+}

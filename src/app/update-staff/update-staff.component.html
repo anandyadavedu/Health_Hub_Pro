@@ -1,0 +1,61 @@
+<div class="container">
+    <h1>Update Staff</h1>
+
+    <form [formGroup]="StaffRegistrationForm">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="form" class="form-label"> Staff Name</label>
+              <input type="text" [(ngModel)]="Staff_Name" formControlName="Staff_Name" id="Staff_Name" name="Staff_Name" class="form-control"
+                placeholder="Staff Name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="form" class="form-label">Enter Address</label>
+              <input type="text" [(ngModel)]="Address" formControlName="Address" id="Address" name="Address" class="form-control"
+                placeholder="Enter Address">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <label for="form" class="form-label">Enter Position</label>
+                <input type="text" [(ngModel)]="Position" formControlName="Position" id="Position" name="Position" class="form-control"
+                  placeholder=" Enter Position">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Join Date</label>
+              <input type="date" [(ngModel)]="JoinDate" formControlName="JoinDate" id="JoinDate" name="JoinDate" class="form-control"
+                placeholder="Joining-Date">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Contact Number</label>
+              <input type="number" [(ngModel)]="Contact_Number" formControlName="Contact_Number" id="Contact_Number" name="Contact_Number"
+                class="form-control" placeholder="Contact-Number">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Enter Username</label>
+              <input type="text" [(ngModel)]="Username" formControlName="Username" class="form-control" id="Username" name="Username"
+                placeholder="Username">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Enter Password</label>
+              <input type="password" [(ngModel)]="Password" formControlName="Password" class="form-control" id="Password" name="Password"
+                placeholder="Password">
+            </div>
+          </div>
+         
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" (click)="UpdateStaff()" >Submit</button>
+          <button type="button" class="btn btn-danger" (click)="Cancel()"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+      </form>
+</div>

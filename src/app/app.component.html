@@ -1,0 +1,63 @@
+<!--Main Navigation-->
+<!-- <header>
+    
+    <button (click)="toggleSidebar()" id="sidebarToggle" class="toggle-button">&#9776;</button>
+    <nav id="sidebarMenu"  class="collapse d-lg-block sidebar collapse ">
+        <div class="position-sticky">
+            <div class="offcanvas-header">
+
+                <img id="Image" src="./assets/Images/IT_Next_Solutions_Logo.png" alt="No Image" />
+             
+            </div>
+            <div class="offcanvas-body mx-1">
+               
+
+                <ul class="navbar-nav d-flex justify-content-start flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/dashboard" class="nav-list" id="dashboard">
+                        <i class="fa-solid fa-house"></i> Dashboard</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a  routerLink="/registration" class="nav-list" id="registration">
+                        <i class="fa-solid fa-address-card"></i> Registration</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/patient" class="nav-list" id="patients"><i class="fa-solid fa-person"></i>
+                        Patients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/patient-record" class="nav-list" id="patient-record"><i
+                            class="fa-solid fa-file"></i> Patient Record</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/staff" class="nav-list" id="staff"><i
+                            class="fa-solid fa-hospital-user"></i> Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/project" class="nav-list" id="project-detail"><i
+                            class="fa-solid fa-capsules"></i> Pharmacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/project" class="nav-list" id="project-detail">
+                        <i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+</header> -->
+<!--Main Navigation-->
+<app-sidebar *ngIf="!(isLoginPage || isSignupPage)"></app-sidebar>
+
+<!--Main layout-->
+<main>
+   
+    <div class="container pt-2">
+        <router-outlet></router-outlet>
+    </div>
+</main>
+<!--Main layout-->

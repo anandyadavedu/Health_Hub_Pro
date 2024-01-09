@@ -1,0 +1,235 @@
+<!-- <app-sidebar></app-sidebar> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="button">
+        <div class="doctor" *ngIf="isDoctor() || isAdmin()">
+          <button class="btn btn-primary" (click)="openModal('DoctorModal')"><i class="fa-solid fa-user-plus"></i>
+            <span class="button-name"> Doctor</span></button>
+        </div>
+        <div class="admin" *ngIf="isAdmin() ">
+          <button class="btn btn-primary"><i class="fa-solid fa-user-plus"></i><span class="button-name">
+              Admin</span></button>
+        </div>
+        <div class="staff" *ngIf="isStaff() || isDoctor() || isAdmin() ">
+          <button class="btn btn-primary" (click)="openModal('StaffModal')"><i class="fa-solid fa-user-plus"></i><span
+              class="button-name"> Staff</span></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Doctor Registration Modal -->
+<div class="modal-overlay" id="DoctorModalOverlay"></div>
+<div class="modal" id="DoctorModal"  >
+  <div class="modal-dialog"  role="document">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header Doctor">
+        <h4 class="modal-title">Doctor Registration</h4>
+        <button type="button" class="btn-close" (click)="closeModal('DoctorModal')" data-bs-dismiss="modal"></button>
+      </div>
+      <form [formGroup]="DoctorRegistrationForm">
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="form" class="form-label">Doctor Name</label>
+              <input type="text" formControlName="Doctor_Name" id="Doctor_Name" name="Doctor_Name" class="form-control"
+                placeholder="Doctor Name">
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="form" class="form-label">Doctor Specialist</label>
+              <input type="text" formControlName="Doctor_Specialist" id="Doctor_Specialist" name="Doctor_Specialist"
+                class="form-control" placeholder="Doctor Specialist">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Contact Number</label>
+              <input type="number" formControlName="Contact_Number" id="Contact_Number" name="Contact_Number"
+                class="form-control" placeholder="Contact Number">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Hospital-ID</label>
+              <input type="number" formControlName="Hospital_Id" id="Hospital_Id" name="Hospital_Id"
+                class="form-control" placeholder="Hospital-ID">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label"> Enter Username</label>
+              <input type="text" formControlName="Username" class="form-control" id="Username" name="Username"
+                placeholder="Username">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label"> Enter Password</label>
+              <input type="password" formControlName="Password" class="form-control" id="Password" name="Password"
+                placeholder="Password">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" (click)="DoctorAdd()">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="closeModal('DoctorModal')"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Staff Registration Modal -->
+<!-- Staff Registration Modal -->
+<!-- Staff Registration Modal -->
+<!-- Staff Registration Modal -->
+
+
+
+<div class="modal-overlay" id="StaffModalOverlay"></div>
+<div class="modal" id="StaffModal">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Staff Registration</h4>
+        <button type="button" class="btn-close" (click)="closeModal('StaffModal')" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+
+      <form [formGroup]="StaffRegistrationForm">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="form" class="form-label"> Staff Name</label>
+              <input type="text" [(ngModel)]="Staff_Name" formControlName="Staff_Name" id="Staff_Name" name="Staff_Name" class="form-control"
+                placeholder="Staff Name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="form" class="form-label">Enter Address</label>
+              <input type="text" [(ngModel)]="Address" formControlName="Address" id="Address" name="Address" class="form-control"
+                placeholder="Enter Address">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">          
+                <label for="form" class="form-label">Enter Position</label>
+                <input type="text" [(ngModel)]="Position" formControlName="Position" id="Position" name="Position" class="form-control"
+                  placeholder=" Enter Position">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Join Date</label>
+              <input type="date" [(ngModel)]="JoinDate" formControlName="JoinDate" id="JoinDate" name="JoinDate" class="form-control"
+                placeholder="Joining-Date">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Contact Number</label>
+              <input type="number" [(ngModel)]="Contact_Number" formControlName="Contact_Number" id="Contact_Number" name="Contact_Number"
+                class="form-control" placeholder="Contact-Number">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Enter Username</label>
+              <input type="text" [(ngModel)]="Username" formControlName="Username" class="form-control" id="Username" name="Username"
+                placeholder="Username">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <label for="form" class="form-label">Enter Password</label>
+              <input type="password" [(ngModel)]="Password" formControlName="Password" class="form-control" id="Password" name="Password"
+                placeholder="Password">
+            </div>
+          </div>
+         
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" (click)="AddStaff()">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="closeModal('StaffModal')"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <<-----Staff Details------->
+<!-- <<-----Staff Details------->
+<!-- <<-----Staff Details------->
+<!-- <<-----Staff Details------->
+
+
+<!-- src/app/table/table.component.html -->
+
+<div class="container">
+
+  <div class="table-header">
+    <h3>Staff Details</h3>
+  </div>
+
+  <!-- Filter input field -->
+  <input type="text" [(ngModel)]="filterText" (input)="filterTable()" class="form-control filter"
+    placeholder="Search Staff Name...">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Staff_Name</th>
+        <th>Created_By</th>        
+        <th>Position</th>
+        <th>JoinDate</th>
+        <th>Contact_Number</th>
+        <th>Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredData">
+        <td>{{ item.Staff_Name }}</td>
+        <td>Dr.{{Name}}</td>
+        <td>{{ item.Position }}</td>
+        <td>{{ item.JoinDate }}</td>
+        <td>{{ item.Contact_Number }}</td>
+        <td>
+          <div class="action">
+            <button type="button" class="btn btn-primary" (click)="UpdateStaff(item)">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="deleteStaff(item.Staff_id)">Delete</button>
+          
+          </div>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>

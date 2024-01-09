@@ -1,0 +1,107 @@
+.container{
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 15px 10px;
+    box-shadow: inset 2px 2px 4px 0px;
+
+}
+
+.table-header h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #139c9c;
+    padding: 10px 10px;
+    margin-top: -8px;
+}
+
+.add-patient{
+    display: flex;
+    justify-content: start;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+
+
+
+
+.action button{
+    margin: 2px 2px;
+}
+
+
+.modal-dialog{
+    margin-top: 100px;
+}
+.modal-header{
+    background-color: #2222db;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.modal-title{
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    margin-left: 25%;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+.form-control{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #7c7e7a;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.modal-footer{
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-danger{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+table{
+    display: inline-table;
+    width: 99%;
+    margin-top: 15px;
+    box-shadow: 1px 1px 3px 4px #6d7474;
+
+}
+.table-header h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #139c9c;
+    padding: 10px 10px;
+    margin-top: -8px;
+}
+.filter{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 44px;
+    margin-bottom: 5px;
+    border: 3px solid #6f736e;
+    border-radius: 10px;
+    width: 99%;
+}
+
+

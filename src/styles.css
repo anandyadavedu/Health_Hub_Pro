@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@fortawesome/fontawesome-free/css/all.css"; */
+
+
+/* // Font Awesome */
+/* @import "../@fortawesome/fontawesome-free/css/fontawesome.css"; */
+/* @import "../@fortawesome/fontawesome-free/css/solid.css";
+@import "../@fortawesome/fontawesome-free/css/regular.css";
+@import "../@fortawesome/fontawesome-free/css/brands.css"; */
+
+/* // MDB SCSS */
+/* @import "../mdb-angular-ui-kit/assets/css/mdb.css"; */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.swal2-popup {
+    background-color: #ffffff; /* Change the background color */
+  }
+  
+  .swal2-title {
+    color: #29da2c; /* Change the title text color */
+  }
+  
+  .swal2-content {
+    color: #35cd3c; /* Change the content text color */
+  }

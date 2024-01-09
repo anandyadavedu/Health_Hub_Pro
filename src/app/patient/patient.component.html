@@ -1,0 +1,131 @@
+
+
+
+<div class="add-patient">
+   <button type="button" class="btn btn-primary"  (click)="openModal('PatientModal')" ><i class="fa-solid fa-user-plus"></i><span> Patient</span></button>
+</div>
+
+<div class="container">
+
+  <div class="table-header">
+    <h3>Patient Details</h3>
+  </div>
+
+  <!-- Filter input field -->
+  <input type="text" [(ngModel)]="filterText" (input)="filterTable()" class="form-control filter"
+    placeholder="Search Patient By Name .......">
+  
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Patient Name</th>
+        <th>Age</th>        
+        <th>Weight</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Contact_Number</th>
+        <th>Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of patientData">
+        <td>{{ item.P_Name }}</td>
+        <td>{{ item.P_Age }}</td>
+        <td>{{ item.P_Weight }}</td>
+        <td>{{ item.P_Gender}}</td>
+        <td>{{ item.Address}}</td>
+        <td>{{ item.MobileNo}}</td>
+        <td>
+          <div class="action">
+            <button type="button" class="btn btn-primary "(click)="UpdatePatient(item)" >Edit</button>
+            <button type="button" class="btn btn-danger" (click)="DeletePatient(item.P_ID)">Delete</button>
+          
+          </div>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<!-- Patient Model  -->
+<!-- Patient Model  -->
+<!-- Patient Model  -->
+
+<div class="modal" id="PatientModal">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Patient Registration</h4>
+        <button type="button" class="btn-close"  (click)="closeModal('PatientModal')" data-bs-dismiss="modal fade"></button>
+      </div>
+
+      <!-- Modal body -->
+
+      <form [formGroup]="PatientForm">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <input type="text" [(ngModel)]="P_Name" formControlName="P_Name" id="P_Name" name="P_Name" class="form-control"
+                placeholder="Patient Name">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <input type="text" [(ngModel)]="P_Gender" formControlName="P_Gender" class="form-control" id="P_Gender" name="P_Gender"
+                placeholder="Enter Gender">
+
+              <!-- <select  [(ngModel)]="P_Gender" formControlName="P_Gender" class="form-control" id="P_Gender" name="P_Gender" name="gender" id="P_Gender" required>
+              
+                <option  value="" disabled selected>Select an option</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>   -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <input type="number" [(ngModel)]="P_Age" formControlName="P_Age" id="P_Age" name="P_Age" class="form-control"
+                placeholder="Patient Age">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <input type="number" formControlName="P_Weight" id="P_Weight" name="P_Weight" class="form-control"
+                placeholder="Patient Weight">
+            </div>
+          </div>
+          <div class="row">
+            
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <input type="text" formControlName="Address" class="form-control" id="Address" name="Address"
+                placeholder="Enter Address">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <input type="text" formControlName="MobileNo" id="MobileNo" name="MobileNo" class="form-control"
+                placeholder="Contact Number">
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" (click)="AddPatient()" >Submit</button>
+          <button type="button" class="btn btn-danger" (click)="closeModal('PatientModal')" 
+            data-bs-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

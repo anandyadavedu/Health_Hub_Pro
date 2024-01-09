@@ -1,0 +1,143 @@
+.container-fluid{
+    margin-top: 75px;
+    margin-bottom: 10px;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 50px;
+
+}
+.button-name{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+table {
+   
+    display: inline-table;
+    width: 99%;
+    margin-top: 15px;
+    box-shadow: 1px 1px 3px 4px #6d7474;
+}
+  
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+
+.table th{
+    font-size: 19px;
+}
+
+
+.table-header h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #139c9c;
+    padding: 10px 10px;
+    margin-top: -8px;
+}
+.filter{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 44px;
+    margin-bottom: 5px;
+    border: 3px solid #6f736e;
+    border-radius: 10px;
+    width: 99%;
+}
+
+
+
+
+
+
+/* <<<<<<--------Model Css Start---------------->>>>>>  */
+
+
+.modal-dialog{
+    margin-top: 10px;
+}
+.modal-header{
+    background-color: #2222db;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.modal-title{
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    margin-left: 25%;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+.form-label{
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 12px;
+   
+   
+
+}
+.row .form-control{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top:px;
+    margin-bottom:5px;
+    border: 2px solid #7c7e7a;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.modal-footer{
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-danger{
+ 
+    margin: 5px 5px;
+}
+
+
+
+
+.container{
+    margin-left: 20px;
+    padding: 15px 10px;
+    box-shadow: inset 2px 2px 4px 0px;
+}
+
+
+
+
+
+
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) to control the opacity */
+    z-index: 1040; /* Ensure it's above Bootstrap's modal z-index */
+    display: none; /* Initially hidden */
+
+}

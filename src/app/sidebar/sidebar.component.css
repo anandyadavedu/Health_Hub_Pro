@@ -1,0 +1,246 @@
+/* .container-fluid{
+    margin: 0;
+    padding: 0;
+ 
+
+}
+.Title{
+ 
+    text-align: center;
+    margin-left: 150px;
+    color: white;
+}
+
+.Title h2{
+    text-align: center;
+    color: white;
+} 
+
+.nav{
+    font-size: 25px;
+}
+.nav-list{
+
+    width: 100%;
+    height: auto;
+    padding: 2px;
+    font-size: 20px;
+    margin: 15px 0;
+    text-decoration: none;
+}
+#offcanvasDarkNavbar{
+    width: 230px;
+}
+.navbar{
+    scroll-behavior: smooth;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.navbar-toggler{
+    padding: 5px;
+
+}
+.navbar-nav{
+    margin: 0px 0 5px 0;
+}
+.nav-item{
+    margin: 15px 0 5px 0;
+    padding: 3px;
+}
+.navbar-main{
+    padding-left: 0px;
+    width: 100%;
+    height: auto;
+    overflow-wrap: break-word;
+    justify-content: left;
+   
+}
+.offcanvas-title{
+    font-size: 18px;
+}
+#Image{
+    width: 100%;
+    padding: 5px;
+    margin-left: -15px;
+    display: inline-flexbox;
+    flex-direction: column;
+}
+
+@media (max-width:768px) {
+    .navbar-main{
+        width:100%;
+    }
+    .navbar-toggler-icon{
+        display: block;
+        
+    }
+}
+#menu{
+    margin-left: -18px;
+    padding: 11px;
+    font-size: 30px;
+}
+#home,#login,#registration,#emp-detail,#project-detail{
+    width: 100%;
+    font-size: 20px;
+
+}
+.offcanvas-body{
+    width: 100%;
+    display: grid;
+    grid-auto-columns: auto;
+    row-gap: 10px;
+   
+    justify-items: left;
+} */
+
+body {
+    background-color: #f2f2f291;
+  }
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 8px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 240px;
+    z-index: 600;
+    background-color: rgb(8 166 186);
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .collapse{
+    border-radius:  0 20px 20px 0;
+    box-shadow: 2px 4px 5px 0 rgb(0 0 0 / 80%);
+
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+
+
+
+  .container-fluid{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: start; */
+
+  }
+ 
+ 
+  .list-group a{
+    text-decoration: none;
+  }
+
+
+  #Image{
+    width: 210px;
+    padding: 5px;
+    margin-left: 12px;
+    display: inline-flexbox;
+    flex-direction: column;
+}
+
+.nav-list{
+
+    width: 100%;
+    height: auto;
+    padding: 2px;
+    font-size: 20px;
+    margin: 15px 0;
+    text-decoration: none;
+    color: white;
+}
+#offcanvasDarkNavbar{
+    width: 230px;
+}
+.navbar{
+    scroll-behavior: smooth;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item{
+    margin: 15px 0 5px 0;
+    padding: 3px;
+}
+.navbar-main{
+    padding-left: 0px;
+    width: 100%;
+    height: auto;
+    overflow-wrap: break-word;
+    justify-content: left;
+   
+}
+.offcanvas-body{
+    width: 100%;
+    display: grid;
+    grid-auto-columns: auto;
+    row-gap: 10px;
+    /* padding: 2px; */
+    justify-items: left;
+}
+
+/* Toggle button styles */
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1; /* Ensure the button is above the sidebar */
+}
+
+/* Media query to show the sidebar on smaller screens */
+@media screen and (max-width: 1100px) {
+    #sidebarMenu {
+        margin-left: -250px; /* Hide the sidebar by default */
+    }
+    #sidebarMenu.show {
+        margin-left: 0; /* Show the sidebar when the "show" class is added */
+    }
+    #sidebarToggle {
+        display: block;
+    }
+}
+
+
+.header{
+    margin-right: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    margin-top: 25px;
+    column-gap: 20px;
+    font-size: 25px;
+  }
+  .user-info span{
+    margin: 0 30px;
+  }
+  .user{
+    margin-right: 20%;
+  }

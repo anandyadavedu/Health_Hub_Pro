@@ -1,0 +1,142 @@
+
+<!-- <div class="container mt-6">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 id="welcome" >Welcome</h2>
+                    
+                </div>
+                <div class="card-body">
+                    <img src="assets/Images/card-pic.jpg" alt="Doctor">
+                    <form  [formGroup]="loginForm" (ngSubmit)="CheckLogin()" >
+                        <select formControlName="RoleId" class="form-select mt-4" aria-label="Default select example">
+                            <option selected disabled>User Type</option>
+                           <option id="option" *ngFor="let role of Role" [value]="role.RoleId">{{role.Role}}</option>
+                        </select>
+                        <div class="form-group">                           
+                            <input type="text"  formControlName="username" class="form-control" id="username" name="username" placeholder="Enter username" />                           
+                        </div>
+                        <div class="form-group">
+                            <input  type="{{ isPasswordVisible ? 'text' : 'password' }}" formControlName="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                            <span class="toggle-password" (click)="togglePasswordVisibility()"><i class="fas" [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'"></i></span>
+                        </div>
+                        <div class="forget">
+                            <label for="" class="form-label"><a  style="text-decoration: none!important;" href="">Forget password</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="button" (click)="CheckLogin()" >Login</button>
+                        <div class="register">
+                            Not a memeber? Register ...... <a routerLink="/signup" class="signup">Signup</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <section class="login">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>WELCOME </h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="image">
+                            <img src="assets/Images/login.jpg" alt="Login Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <form  [formGroup]="loginForm" (ngSubmit)="CheckLogin()">
+                            <div class="form-group">
+                                <label for="role"  class="form-label">Select Your Role</label>
+                                <select formControlName="RoleId" class="form-select" aria-label="Default select example">
+                                    <option selected disabled>User Type</option>
+                                <option id="option" *ngFor="let role of Role" [value]="role.RoleId">{{role.Role}}</option>
+                                </select>
+                            </div>    
+                            <div class="form-group">
+                                <label for="username"  class="form-label">Enter Your Username </label>                           
+                                <input type="text"  formControlName="username" class="form-control" id="username" name="username" placeholder="Enter username" />                           
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label" >Enter Your Password</label>
+                                <input  type="{{ isPasswordVisible ? 'text' : 'password' }}" formControlName="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                                <span class="toggle-password" (click)="togglePasswordVisibility()"><i class="fas" [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'"></i></span>
+                            </div>
+                            <div class="forget">
+                                <label for="forget" class="forget-password"><a  style="text-decoration: none!important;" href="">Forget password</a></label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="button" (click)="CheckLogin()" >Login</button>
+                            <div class="register">
+                                Not a memeber? Register ...... <a routerLink="/signup" class="signup">Signup</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>        
+</section> -->
+
+
+
+<section class="login">
+    <div class="container">
+        <div class="card">
+            <!-- <div class="card-header">
+                <h2>WELCOME </h2>
+            </div> -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="image">
+                            <img src="assets/Images/login1.jpg" alt="Login Image">
+                        </div>
+                    </div>
+                    <div class="0ffset-lg-1 col-lg-6">
+                        <form  [formGroup]="loginForm" (ngSubmit)="CheckLogin()">
+                            <div class="signin">
+                                <label for="signin" class="sign">Sign In</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="role" class="form-label">Select Your Role</label>
+                                <div class="image-container">                                 
+                                    <label class="image-radio" *ngFor="let image of images">
+                                      <input type="radio"  name="selected-image"   class="image-radio-input" (change)="selectImage(image)">
+                                      <img [src]="image.src" [alt]="image.alt" class="image-radio-img" [class.selected]="selectedImage === image">
+                                      <div class="checkmark" *ngIf="selectedImage === image" >
+                                        <span>&#10003;</span>
+                                      </div>
+                                    </label>
+                                  </div>
+                                 
+                            </div>    
+                            <div class="form-group">
+                                <label for="username"  class="form-label">Username </label>                           
+                                <input type="text"  formControlName="username" class="form-control" id="username" name="username" placeholder="Enter username" />                           
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label" >Password</label>
+                                <input  type="{{ isPasswordVisible ? 'text' : 'password' }}" formControlName="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                                <span class="toggle-password" (click)="togglePasswordVisibility()"><i class="fas" [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'"></i></span>
+                            </div>
+                            <div class="forget">
+                                <label for="forget" class="forget-password"><a  style="text-decoration: none!important;" href="">Forget password</a></label>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-lg" id="button" (click)="CheckLogin()" >Login</button>
+                            <div class="register">
+                                Not a memeber? Register ...... <a routerLink="/signup" class="signup">Signup</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>        
+</section>

@@ -1,0 +1,52 @@
+<div class="container">
+    <h1>Update Patient</h1>
+    <form [formGroup]="PatientForm" >
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+              <input type="text" [(ngModel)]="P_Name" formControlName="P_Name" id="P_Name" name="P_Name" class="form-control"
+                placeholder="Patient Name">
+            </div>
+            <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <input type="text" [(ngModel)]="P_Gender" formControlName="P_Gender" class="form-control" id="P_Gender" name="P_Gender"
+                placeholder="Enter Gender">
+
+              <!-- <select name="P_Gender" [(ngModel)]="P_Gender" formControlName="P_Gender" id="P_Gender">
+                <option value="Male">Male</option>
+                <option value="Male">Female</option>
+              </select>   -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <input type="number" [(ngModel)]="P_Age" formControlName="P_Age" id="P_Age" name="P_Age" class="form-control"
+                placeholder="Patient Age">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <input type="number" [(ngModel)]="P_Weight" formControlName="P_Weight" id="P_Weight" name="P_Weight" class="form-control"
+                placeholder="Enter Patient Weight">
+            </div>
+          </div>
+          <div class="row">
+            
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <input type="text" [(ngModel)]="Address" formControlName="Address" class="form-control" id="Address" name="Address"
+                placeholder="Enter Address">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <input type="text"  [(ngModel)]="MobileNo" formControlName="MobileNo" id="MobileNo" name="MobileNo" class="form-control"
+                placeholder=" Enter Contact Number">
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" (click)="UpdatePatient()" >Update</button>
+          <button type="button" class="btn btn-danger" (click)="Cancel()" >Cancel</button>
+        
+        </div>
+      </form>
+</div>

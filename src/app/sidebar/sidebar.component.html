@@ -1,0 +1,132 @@
+<!-- <nav class="navbar navbar-dark position-fixed fixed-top" style="background-color: midnightblue; position: relative">
+    <div class="container-fluid position-relative">
+      <button  class="navbar-toggler" style="border: 2px solid #0a0000" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span  class="navbar-toggler-icon"></span>
+      </button> -->
+
+      <!-- toggle button code when hover then open and whenever hover outside sidebar then closed -->
+        <!-- <button class="navbar-toggler d-flex position-absolute" style="border: 2px solid #949292" type="button"
+          (mouseenter)="isSidebarOpen = true" (mouseleave)="isSidebarOpen = false" id="toggleButton">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+      <!-- togle button end -->
+
+        <!-- <div class="Title">
+            <h2>Hospital Management System</h2>
+        </div> -->
+      <!-- this is simple offcanvas for click  outside the sidebar  then close  -->
+
+      <!-- <div class="offcanvas offcanvas-start text-bg-black" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel"> -->
+
+      <!-- This is hover offcanvas for hover outside the sidebar  -->
+      <!-- <div class="offcanvas offcanvas-start text-bg-black" tabindex="-1" [class.show]="isSidebarOpen"
+        (mouseenter)="isSidebarOpen = true" (mouseleave)="isSidebarOpen = false" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel"> -->
+        <!-- end hover offcanvas  -->
+
+
+        <!-- Start Offcanvas Header part  -->
+        <!-- <div class="offcanvas-header">
+
+            <img id="Image" src="./assets/Images/IT_Next_Solutions_Logo.png" alt="No Image" />
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+         
+        </div> -->
+
+        <!-- End Offcanvas header part  -->
+
+        <!-- <div class="navbar-main">
+          <div class="offcanvas-body" style="max-height: 80vh; overflow-y: auto">
+            <ul class="navbar-nav d-flex justify-content-start flex-grow-1">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/dashboard" class="nav-list" id="dashboard"><i class="fa-solid fa-gauge"
+                  style="margin-right: 4px"></i>Dashboard</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/registration" class="nav-list" id="registration">
+                  <i class="fa-solid fa-address-card"></i> Registration</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/patient" class="nav-list" id="patients"><i class="fa-solid fa-hospital-user"></i>
+                  Patients</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/patient-record" class="nav-list" id="patient-record"><i
+                    class="fa-solid fa-file"></i> Patient Record</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/new-patient" class="nav-list" id="emp-detail"><i
+                    class="fa-solid fa-file"></i> New Patient</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/staff" class="nav-list" id="staff"><i
+                    class="fa-solid fa-hospital-user"></i>Staff</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/project" class="nav-list" id="project-detail"><i
+                    class="fa-solid fa-capsules"></i> Pharmacy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav> -->
+
+
+
+<header>
+  <!-- Sidebar -->
+  <button (click)="toggleSidebar()" id="sidebarToggle" class="toggle-button">&#9776;</button>
+  <nav id="sidebarMenu"  class="collapse d-lg-block sidebar collapse ">
+      <div class="position-sticky">
+          <div class="offcanvas-header">
+
+              <img id="Image" src="./assets/Images/IT_Next_Solutions_Logo.png" alt="No Image" />
+           
+          </div>
+          <div class="offcanvas-body mx-1">
+             
+
+              <ul class="navbar-nav d-flex justify-content-start flex-grow-1">
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="/dashboard" class="nav-list" id="dashboard">
+                      <i class="fa-solid fa-house"></i> Dashboard</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                      <a  routerLink="/registration" class="nav-list" id="registration">
+                      <i class="fa-solid fa-address-card"></i> Registration</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="/patient" class="nav-list" id="patients"><i class="fa-solid fa-person"></i>
+                      Patients</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="/patient-record" class="nav-list" id="patient-record"><i
+                          class="fa-solid fa-file"></i> Patient Record</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="/staff" class="nav-list" id="staff"><i
+                          class="fa-solid fa-hospital-user"></i> Staff</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="/project" class="nav-list" id="project-detail"><i
+                          class="fa-solid fa-capsules"></i> Pharmacy</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="/project" class="nav-list" id="project-detail">
+                      <i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+
+</header>

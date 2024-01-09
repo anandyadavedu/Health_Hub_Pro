@@ -1,0 +1,54 @@
+<nav class="navbar navbar-dark position-fixed fixed-top" style="background-color: midnightblue;">
+    <div class="container-fluid position-relative">
+      <!-- Toggle button code -->
+      <!-- <button class="navbar-toggler d-flex position-absolute" style="border: 2px solid #949292" type="button"
+        (mouseenter)="isSidebarOpen = true" (mouseleave)="isSidebarOpen = false" id="toggleButton">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+  
+      <!-- Sidebar -->
+      <div class="offcanvas offcanvas-start text-bg-black" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <!-- Offcanvas Header -->
+        <div class="offcanvas-header">
+          <img id="Image" src="./assets/Images/IT_Next_Solutions_Logo.png" alt="No Image" />
+        </div>
+        <!-- Sidebar Content -->
+        <div class="offcanvas-body" style="max-height: 80vh; overflow-y: auto">
+          <ul class="navbar-nav d-flex justify-content-start flex-grow-1">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/dashboard" class="nav-list" id="dashboard"><i class="fa-solid fa-gauge"
+                  style="margin-right: 4px"></i>Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/registration" class="nav-list" id="registration">
+                <i class="fa-solid fa-address-card"></i> Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/patient" class="nav-list" id="patients"><i class="fa-solid fa-hospital-user"></i>
+                Patients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/patient-record" class="nav-list" id="patient-record"><i
+                  class="fa-solid fa-file"></i> Patient Record</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/new-patient" class="nav-list" id="emp-detail"><i
+                  class="fa-solid fa-file"></i> New Patient</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/project" class="nav-list" id="project-detail"><i
+                  class="fa-solid fa-capsules"></i> Pharmacy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Main content -->
+      <main style="margin-left: 260px; padding: 15px;"> <!-- Adjust margin-left as needed -->
+        <!-- Your main content goes here -->
+      </main>
+    </div>
+  </nav>
+  
